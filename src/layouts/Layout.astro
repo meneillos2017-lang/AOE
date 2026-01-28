@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="./public/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Exercicio 87</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+
+/*RESET*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html{
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: Miola;
+	src: url(./fonts/miola.otf);
+}
+
+@font-face {
+	font-family: NotoSans;
+	src: url(./fonts/NotoSans-VariableFont_wdth_wght.ttf);
+}
+
+:root{
+	--font-primary: Miola;
+	--font-secondary: NotoSans;
+	--color-background: #181c29;
+  	--color-blue-midnight: #001d34;
+  	--color-dark: #000000;
+  	--color-golden-dark: #ab7d2a;
+  	--color-golden-light: #ffdf91;
+  	--color-gradient-navbar: #767c9265;
+  	--color-light: #ffffff;
+  	--color-links: #53dbdd;
+  	--color-text-details: #c7c7c7;
+}
+
+body {
+ background: var(--color-background);
+ color: var(--color-golden-light);
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-family: var(--font-primary);
+}
+
+button {
+ cursor: pointer;
+}
+	
+</style>

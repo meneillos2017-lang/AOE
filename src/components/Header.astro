@@ -1,0 +1,82 @@
+<header class="header">
+
+    <a href="/">
+        <div class="header__logo">
+            <img class="header__img" src="/ageofempires-logo.webp" alt="Logo de Age of Empire">
+        </div>
+    </a>
+
+    <div class="header__menu">
+
+        <nav class="header__nav">
+
+            <a href="" class="header__a">GAME INSIDERS</a>
+
+            <a href="" class="header__a">GAMES</a>
+
+            <a href="" class="header__a">COMMUNITY</a>
+
+            <a href="" class="header__a">NEWS</a>
+
+            <a href="" class="header__a">MODS</a>
+
+            <a href="" class="header__a">SUPPORT</a>
+
+        </nav>
+
+    </div>
+</header>
+
+<style>
+
+.header{
+    width: 100vw;
+    background: linear-gradient( 90deg , rgba(24, 28, 41, 1) 0% , rgba(118, 124, 146, 0.4) 50% , rgba(24, 28, 41, 1) 100% );
+
+}
+
+.header__logo{
+    height: 70px;
+    padding-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color-dark);
+}
+
+.header__img{
+    max-width: 13rem;
+}
+
+.header__menu{
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__nav{
+    max-width: 1580px;
+    min-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 4px solid;
+    border-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(184, 134, 45, 1),
+    transparent
+  ) 1; 
+}
+
+.header__a{
+    text-decoration: none;
+    color: var(--color-golden-light);
+}
+
+</style>

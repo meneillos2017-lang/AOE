@@ -1,0 +1,96 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+
+import civilizations from '../data/civilizations.json';
+---
+
+<Layout>
+
+	<Header></Header>
+
+	<Hero title="Civilizations"></Hero>
+
+	<section class="cards">
+		<h2 class="cards__h2">
+			Included with Age of Empires IV Anniversary Edition
+		</h2>
+
+		<div class="cards__container">
+			{civilizations.map((item) => (
+			<a href={`/civilizations/${item.name}`}>
+				<div class="card">
+					<div class="card__img">
+						<img src={item['civilization-image']} alt={item.name}/>
+					</div>
+
+					<div class="card__footer">
+						<img src={item['flag-image']} alt="" class={item.title}/>
+						<p class="card__p">{item.name}</p>
+					</div>
+				</div>
+			</a>
+		))}
+		</div>
+	</section>
+
+	<Footer></Footer>
+
+</Layout>
+
+
+<style>
+
+.cards{
+	max-width: 1580px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.cards__h2{
+	font-size: 2rem;
+	font-family: var(--font-primary);
+	padding-bottom: 2rem;
+}
+
+.cards__container{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.cards__container a{
+	text-decoration: none;
+	color: var(--color-golden-light)
+}
+
+.card{
+	width: 330px;
+	border: 2px solid transparent;
+}
+
+.card:hover{
+	border: 2px solid var(--color-golden-light);
+}
+
+.card__img img{
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.card__footer{
+	background-image: url(./img/fondo_subnav.webp), linear-gradient( 180deg , rgba(0, 62, 100, 1) 0% , rgba(0, 29, 52, 1) 100% );
+	background-blend-mode: overlay;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 10px;
+}
+
+.card__flag{
+	width: 2rem;
+}
+
+</style>
